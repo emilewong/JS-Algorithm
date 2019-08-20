@@ -22,14 +22,14 @@ function memorize(fn) {
     };
 }
 
-function slowFib(n) {
+function fib(n) {
     if (n < 2) {
         return n;
     }
-    return slowFib(n - 1) + slowFib(n - 2);
+    return fib(n - 1) + fib(n - 2);
 }
 
-const fib = memorize(slowFib);
+fib = memorize(fib);
 
 module.exports = fib;
 
